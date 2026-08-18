@@ -3,57 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="あお文鳥の開発室 - 暮らしとスポーツを少し便利にするアプリ">
+  <meta name="description" content="あお文鳥の開発室。毎日を少し楽しく、少し便利にするアプリをつくっています。">
   <title>あお文鳥の開発室</title>
   <style>
-    :root { --ink:#17363b; --muted:#587277; --paper:#fffdf8; --mint:#dff2e8; --blue:#dceef4; --accent:#19746d; --line:#d7e3df; }
+    :root { --navy:#173450; --ink:#24354a; --coral:#f07e6d; --yellow:#ffd16d; --mint:#a9dfd1; --cream:#fff9ed; --paper:#ffffff; --line:rgba(23,52,80,.12); }
     * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:linear-gradient(150deg,#f3faf7 0%,var(--paper) 45%,#fff6e8 100%); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; }
-    main { width:min(100% - 32px,960px); margin:auto; padding:48px 0 64px; }
-    .hero { padding:clamp(32px,7vw,72px); border:1px solid var(--line); border-radius:28px; background:rgba(255,253,248,.82); box-shadow:0 18px 48px rgba(23,54,59,.09); }
-    .eyebrow { margin:0 0 14px; color:var(--accent); font-weight:700; letter-spacing:.12em; }
-    h1 { margin:0; font-size:clamp(2rem,7vw,4rem); letter-spacing:.05em; }
-    .lead { max-width:38rem; margin:20px 0 0; font-size:clamp(1rem,2.4vw,1.2rem); line-height:1.9; color:var(--muted); }
-    section { margin-top:52px; }
-    h2 { margin:0 0 20px; font-size:1.45rem; }
-    .apps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
-    .app-card { min-height:230px; padding:28px; border:1px solid var(--line); border-radius:22px; background:rgba(255,255,255,.82); box-shadow:0 8px 24px rgba(23,54,59,.06); }
-    .mark { display:grid; place-items:center; width:48px; height:48px; margin-bottom:20px; border-radius:15px; background:var(--mint); color:var(--accent); font-size:1.35rem; font-weight:800; }
-    .app-card:nth-child(2) .mark { background:var(--blue); }
-    h3 { margin:0; font-size:1.35rem; }
-    .app-card p { margin:12px 0 0; line-height:1.8; color:var(--muted); }
-    .future { margin:22px 0 0; color:var(--muted); text-align:center; }
-    footer { margin-top:54px; color:var(--muted); font-size:.9rem; text-align:center; }
-    @media (max-width:640px) { main { width:min(100% - 24px,960px); padding-top:24px; } .hero { border-radius:22px; } .apps { grid-template-columns:1fr; } }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    .hero { position:relative; overflow:hidden; min-height:620px; background:var(--navy); color:#fff; isolation:isolate; }
+    .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(23,52,80,.98) 0%,rgba(23,52,80,.86) 39%,rgba(23,52,80,.28) 72%,rgba(23,52,80,.52) 100%); }
+    .hero-art { position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; object-position:center; opacity:.92; }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:24px 0; }
+    .brand { display:flex; align-items:center; gap:10px; color:#fff; font-weight:800; letter-spacing:.08em; text-decoration:none; }
+    .brand-dot { display:grid; place-items:center; width:35px; height:35px; border-radius:50%; background:var(--coral); color:#fff; font-size:.85rem; }
+    .nav-label { padding:8px 13px; border:1px solid rgba(255,255,255,.38); border-radius:99px; color:#fff; font-size:.78rem; letter-spacing:.08em; }
+    .hero-copy { padding:92px 0 110px; max-width:590px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; margin:0 0 18px; padding:8px 12px; border-radius:99px; background:rgba(255,255,255,.15); color:#fff3cc; font-size:.78rem; font-weight:800; letter-spacing:.12em; }
+    h1 { margin:0; font-size:clamp(3rem,7.4vw,6.4rem); line-height:1.05; letter-spacing:.04em; }
+    .lead { margin:24px 0 0; max-width:30rem; font-size:clamp(1rem,2vw,1.22rem); line-height:1.9; color:#edf7f7; }
+    .spark { position:absolute; right:7%; bottom:42px; width:132px; height:132px; border-radius:50%; background:var(--yellow); color:var(--navy); display:grid; place-items:center; font-size:2.7rem; box-shadow:0 12px 0 rgba(0,0,0,.11); transform:rotate(10deg); }
+    .intro { padding:90px 0 42px; text-align:center; }
+    .section-kicker { margin:0; color:#d76559; font-size:.78rem; font-weight:800; letter-spacing:.16em; }
+    h2 { margin:12px 0 0; color:var(--navy); font-size:clamp(2rem,4vw,3.2rem); letter-spacing:.06em; }
+    .subcopy { max-width:42rem; margin:18px auto 0; color:#617283; line-height:1.85; }
+    .apps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px; padding:28px 0 104px; }
+    .card { position:relative; overflow:hidden; min-height:330px; padding:30px; border:1px solid var(--line); border-radius:28px; background:var(--paper); box-shadow:0 20px 42px rgba(23,52,80,.10); transition:transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform:translateY(-5px); box-shadow:0 26px 50px rgba(23,52,80,.16); }
+    .card::after { content:""; position:absolute; width:190px; height:190px; border-radius:50%; right:-55px; bottom:-70px; background:var(--tint); }
+    .card-gaman { --tint:#ffe1ea; }
+    .card-kendo { --tint:#d9eff4; }
+    .app-icon { position:relative; z-index:1; display:block; width:104px; height:104px; border-radius:24px; object-fit:cover; box-shadow:0 11px 22px rgba(23,52,80,.18); }
+    .app-type { position:relative; z-index:1; display:inline-block; margin:26px 0 10px; color:var(--accent); font-size:.76rem; font-weight:800; letter-spacing:.14em; }
+    .card-gaman { --accent:#d56379; }
+    .card-kendo { --accent:#34758c; }
+    h3 { position:relative; z-index:1; margin:0; color:var(--navy); font-size:1.7rem; letter-spacing:.05em; }
+    .card p { position:relative; z-index:1; max-width:26rem; margin:14px 0 0; color:#627386; line-height:1.8; }
+    .future { margin:0 0 86px; padding:31px; border:1px dashed #9abdb6; border-radius:22px; background:#e7f6f0; color:#38685e; text-align:center; font-weight:700; }
+    footer { padding:34px 0; background:#102d47; color:#dce8ec; text-align:center; font-size:.88rem; letter-spacing:.05em; }
+    @media (max-width:720px) { .wrap { width:min(100% - 28px,1120px); } .hero { min-height:580px; } .hero::after { background:linear-gradient(180deg,rgba(23,52,80,.78),rgba(23,52,80,.93)); } .hero-art { object-position:58% center; opacity:.66; } .hero-copy { padding:72px 0 90px; } .spark { width:92px; height:92px; right:6%; bottom:26px; font-size:1.9rem; } .apps { grid-template-columns:1fr; padding-bottom:72px; } .card { min-height:300px; } }
   </style>
 </head>
 <body>
-  <main>
-    <header class="hero">
-      <p class="eyebrow">AO BUNCHO APP STUDIO</p>
-      <h1>あお文鳥の開発室</h1>
-      <p class="lead">暮らしとスポーツを少し便利にするアプリを、ていねいに作っています。</p>
-    </header>
-
-    <section aria-labelledby="apps-title">
-      <h2 id="apps-title">アプリ一覧</h2>
-      <div class="apps">
-        <!-- 新しいアプリは、この app-card をコピーして追加できます。 -->
-        <article class="app-card">
-          <div class="mark" aria-hidden="true">我</div>
-          <h3>がまん通帳</h3>
-          <p>日々のがまんを記録して、続ける力をそっと応援するアプリです。</p>
-        </article>
-        <article class="app-card">
-          <div class="mark" aria-hidden="true">剣</div>
-          <h3>剣道スコア</h3>
-          <p>剣道の試合記録・結果確認を、スムーズに行うためのアプリです。</p>
-        </article>
+  <header class="hero">
+    <img class="hero-art" src="assets/aobuncho-studio-hero.png" alt="">
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top"><span class="brand-dot">文</span>あお文鳥の開発室</a>
+        <span class="nav-label">APP STUDIO</span>
+      </nav>
+      <div class="hero-copy" id="top">
+        <p class="eyebrow">SMALL APPS, BRIGHT DAYS</p>
+        <h1>毎日に、<br>小さなときめきを。</h1>
+        <p class="lead">暮らしとスポーツを少し楽しく、少し便利に。あお文鳥の開発室は、使う人のそばで役立つアプリをつくっています。</p>
       </div>
-      <p class="future">新しいアプリも、これから随時追加していきます。</p>
+    </div>
+    <div class="spark" aria-hidden="true">✦</div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro" aria-labelledby="apps-title">
+      <p class="section-kicker">OUR APPS</p>
+      <h2 id="apps-title">つくったアプリ</h2>
+      <p class="subcopy">毎日のがんばりを応援するもの、熱い試合を残すもの。ひとつひとつに、使いやすさと楽しさを込めています。</p>
     </section>
 
-    <footer>© あお文鳥の開発室</footer>
+    <section class="apps" aria-label="アプリ一覧">
+      <!-- 新しいアプリは card をコピーして追加できます。 -->
+      <article class="card card-gaman">
+        <img class="app-icon" src="assets/gamanbook-icon.png" alt="がまん通帳のアプリアイコン">
+        <span class="app-type">LIFE LOG</span>
+        <h3>がまん通帳</h3>
+        <p>日々のがまんを記録して、続ける力をそっと応援するアプリです。</p>
+      </article>
+
+      <article class="card card-kendo">
+        <img class="app-icon" src="assets/kendo-score-icon.png" alt="剣道スコアのアプリアイコン">
+        <span class="app-type">SPORTS SCORE</span>
+        <h3>剣道スコア</h3>
+        <p>剣道の試合記録や結果確認を、気持ちよくスムーズに行うためのアプリです。</p>
+      </article>
+    </section>
+
+    <p class="future">新しいアプリも、これから随時追加していきます。</p>
   </main>
+
+  <footer>© あお文鳥の開発室</footer>
 </body>
 </html>
