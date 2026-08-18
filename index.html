@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="あお文鳥の開発室 - 暮らしとスポーツを少し便利にするアプリ">
+  <title>あお文鳥の開発室</title>
+  <style>
+    :root { --ink:#17363b; --muted:#587277; --paper:#fffdf8; --mint:#dff2e8; --blue:#dceef4; --accent:#19746d; --line:#d7e3df; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:linear-gradient(150deg,#f3faf7 0%,var(--paper) 45%,#fff6e8 100%); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; }
+    main { width:min(100% - 32px,960px); margin:auto; padding:48px 0 64px; }
+    .hero { padding:clamp(32px,7vw,72px); border:1px solid var(--line); border-radius:28px; background:rgba(255,253,248,.82); box-shadow:0 18px 48px rgba(23,54,59,.09); }
+    .eyebrow { margin:0 0 14px; color:var(--accent); font-weight:700; letter-spacing:.12em; }
+    h1 { margin:0; font-size:clamp(2rem,7vw,4rem); letter-spacing:.05em; }
+    .lead { max-width:38rem; margin:20px 0 0; font-size:clamp(1rem,2.4vw,1.2rem); line-height:1.9; color:var(--muted); }
+    section { margin-top:52px; }
+    h2 { margin:0 0 20px; font-size:1.45rem; }
+    .apps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .app-card { min-height:230px; padding:28px; border:1px solid var(--line); border-radius:22px; background:rgba(255,255,255,.82); box-shadow:0 8px 24px rgba(23,54,59,.06); }
+    .mark { display:grid; place-items:center; width:48px; height:48px; margin-bottom:20px; border-radius:15px; background:var(--mint); color:var(--accent); font-size:1.35rem; font-weight:800; }
+    .app-card:nth-child(2) .mark { background:var(--blue); }
+    h3 { margin:0; font-size:1.35rem; }
+    .app-card p { margin:12px 0 0; line-height:1.8; color:var(--muted); }
+    .future { margin:22px 0 0; color:var(--muted); text-align:center; }
+    footer { margin-top:54px; color:var(--muted); font-size:.9rem; text-align:center; }
+    @media (max-width:640px) { main { width:min(100% - 24px,960px); padding-top:24px; } .hero { border-radius:22px; } .apps { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">AO BUNCHO APP STUDIO</p>
+      <h1>あお文鳥の開発室</h1>
+      <p class="lead">暮らしとスポーツを少し便利にするアプリを、ていねいに作っています。</p>
+    </header>
+
+    <section aria-labelledby="apps-title">
+      <h2 id="apps-title">アプリ一覧</h2>
+      <div class="apps">
+        <!-- 新しいアプリは、この app-card をコピーして追加できます。 -->
+        <article class="app-card">
+          <div class="mark" aria-hidden="true">我</div>
+          <h3>がまん通帳</h3>
+          <p>日々のがまんを記録して、続ける力をそっと応援するアプリです。</p>
+        </article>
+        <article class="app-card">
+          <div class="mark" aria-hidden="true">剣</div>
+          <h3>剣道スコア</h3>
+          <p>剣道の試合記録・結果確認を、スムーズに行うためのアプリです。</p>
+        </article>
+      </div>
+      <p class="future">新しいアプリも、これから随時追加していきます。</p>
+    </section>
+
+    <footer>© あお文鳥の開発室</footer>
+  </main>
+</body>
+</html>
