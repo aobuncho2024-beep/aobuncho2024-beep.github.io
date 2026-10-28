@@ -42,6 +42,20 @@
     .future { margin:0 0 86px; padding:31px; border:1px dashed #9abdb6; border-radius:22px; background:#e7f6f0; color:#38685e; text-align:center; font-weight:700; }
     footer { padding:34px 0; background:#102d47; color:#dce8ec; text-align:center; font-size:.88rem; letter-spacing:.05em; }
     @media (max-width:720px) { .wrap { width:min(100% - 28px,1120px); } .hero { min-height:580px; } .hero::after { background:linear-gradient(180deg,rgba(23,52,80,.78),rgba(23,52,80,.93)); } .hero-art { object-position:58% center; opacity:.66; } .hero-copy { padding:72px 0 90px; } .spark { width:92px; height:92px; right:6%; bottom:26px; font-size:1.9rem; } .apps { grid-template-columns:1fr; padding-bottom:72px; } .card { min-height:300px; } }
+
+    .card-greenlife { --tint:#e6efd4; --accent:#59783d; grid-column:1/-1; padding:clamp(22px,4vw,42px); background:#fbfcf4; }
+    .greenlife-heading { display:flex; align-items:center; gap:22px; position:relative; z-index:1; }
+    .greenlife-heading .app-type { margin:0 0 8px; }
+    .greenlife-heading h3 { font-size:clamp(1.6rem,4vw,2.2rem); color:#25472f; letter-spacing:.01em; }
+    .greenlife-subtitle { display:block; margin-top:6px; font-size:1rem; font-weight:600; color:#597047; }
+    .greenlife-banner { position:relative; z-index:1; display:block; width:100%; height:auto; margin-top:26px; border-radius:18px; border:1px solid #dce5cf; }
+    .card-greenlife p { max-width:54rem; color:#53634c; }
+    .greenlife-tags { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:9px; margin:20px 0 0; padding:0; list-style:none; }
+    .greenlife-tags li { padding:7px 12px; border-radius:99px; background:#eaf0dc; color:#456037; font-size:.85rem; }
+    .greenlife-link { background:#365e3c; }
+    .greenlife-link:hover { background:#284a2e; }
+    .release-note { position:relative; z-index:1; display:inline-block; padding:6px 10px; border-radius:8px; background:#edf1e3; color:#5a6b4d; font-size:.8rem; }
+    @media(max-width:480px) { .greenlife-heading { gap:14px; align-items:flex-start; } .greenlife-heading .app-icon { width:76px; height:76px; border-radius:17px; } }
   </style>
 </head>
 <body>
@@ -88,6 +102,19 @@
         </div>
         <p><a class="store-link" href="kendo-score/index.html">機能紹介・操作マニュアル →</a></p>
       </article>
+
+      <article class="card card-greenlife" id="green-life" aria-labelledby="green-life-title">
+        <div class="greenlife-heading">
+          <img class="app-icon" src="green-life/assets/icon.jpg" alt="Green Lifeのアプリアイコン" width="104" height="104" loading="lazy">
+          <div><span class="app-type">GARDENING &amp; GROWTH LOG</span>
+            <h3 id="green-life-title">Green Life<span class="greenlife-subtitle">菜のある生活</span></h3>
+          </div>
+        </div>
+        <p>育てる楽しさを、毎日の記録に。花・観葉植物・家庭菜園のお世話や成長写真、園芸用品をひとつにまとめるアプリです。</p>
+        <a href="green-life/" aria-label="Green Lifeの機能と画面紹介を見る"><img class="greenlife-banner" src="green-life/assets/feature-combined.jpg" alt="Green Lifeのお世話、植物、成長写真、園芸用品、調べるの5つの画面" width="1024" height="500" loading="lazy"></a>
+        <ul class="greenlife-tags" aria-label="Green Lifeの主な機能"><li>水やり・肥料・葉水の記録</li><li>成長写真とコメント</li><li>お世話のリマインダー</li><li>園芸用品の購入管理</li><li>植物情報・動画検索</li></ul>
+        <div class="store-links"><a class="store-link greenlife-link" href="green-life/">機能と画面を詳しく見る →</a><span class="release-note">Android版・公開準備中</span></div>
+      </article>
     </section>
 
     <p class="future">新しいアプリも、これから随時追加していきます。</p>
@@ -96,3 +123,4 @@
   <footer>© あお文鳥の開発室</footer>
 </body>
 </html>
+

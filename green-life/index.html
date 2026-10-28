@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Green Life - 菜のある生活。花・観葉植物・家庭菜園のお世話、成長写真、園芸用品をまとめて管理。実際の画面で機能をご紹介します。">
+  <meta property="og:title" content="Green Life - 菜のある生活｜あお文鳥の開発室">
+  <meta property="og:description" content="育てる楽しさを、毎日の記録に。お世話・植物・成長写真・園芸用品・調べる、5つの画面をご紹介。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aobuncho2024-beep.github.io/green-life/">
+  <meta property="og:image" content="https://aobuncho2024-beep.github.io/green-life/assets/feature-combined.jpg">
+  <title>Green Life - 菜のある生活｜あお文鳥の開発室</title>
+  <style>
+    :root{--ink:#29432f;--muted:#60705b;--green:#365e3c;--cream:#faf8ee;--line:#dfe5d3;--clay:#ac714f}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.85}a{color:var(--green);text-underline-offset:4px}a:focus-visible{outline:3px solid var(--clay);outline-offset:5px}img{max-width:100%;height:auto;display:block}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:#fffef8}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}.studio{font-size:.9rem;font-weight:700;text-decoration:none}.badge{display:inline-block;background:#e8eedb;border-radius:99px;padding:5px 13px;font-size:.8rem;color:#526345}
+    .hero{padding:58px 0 34px}.brand{display:flex;gap:24px;align-items:center}.icon{width:110px;height:110px;border-radius:24px;box-shadow:0 8px 26px #2a44241a}.eyebrow{color:var(--clay);letter-spacing:.13em;font-size:.74rem;font-weight:800;margin:0 0 4px}h1{font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.2;margin:0;letter-spacing:.015em}.subtitle{font-size:1.1rem;margin:8px 0 0;color:var(--muted)}.headline{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;margin:30px 0 12px}.intro{max-width:48rem;margin:0;color:var(--muted)}.hero-image{margin-top:30px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}.hero-image img{width:100%}
+    .feature-nav{display:flex;flex-wrap:wrap;gap:10px;padding:26px 0 38px}.feature-nav a{padding:8px 16px;border:1px solid #d8e2c8;border-radius:99px;text-decoration:none;font-size:.9rem;background:#fffef9}.feature-nav a:hover{background:#e8eedb}
+    .section-title{font-size:clamp(1.5rem,4vw,2rem);margin:12px 0 24px}.features{display:grid;gap:34px;padding-bottom:54px}.feature{background:#fffef9;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px #2a442408}.feature-graphic{display:block;background:#f3f4e8}.feature-graphic img{width:100%}.feature-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px 38px;padding:30px 34px}.number{font-size:.76rem;font-weight:800;letter-spacing:.1em;color:var(--clay);margin:0 0 4px}.feature h3{font-size:clamp(1.25rem,3vw,1.7rem);line-height:1.5;margin:0 0 12px}.feature p{margin:0;color:var(--muted)}.feature .number{color:var(--clay)}.feature ul{padding-left:1.3em;margin:0;color:#53634c}.feature li+li{margin-top:8px}.screen-link{display:inline-block;margin-top:16px;font-weight:700;font-size:.9rem}.feature-caption{font-size:.8rem;text-align:center;padding:8px 16px;background:#f0f3e8;color:var(--muted);margin:0}
+    .closing{background:#eaf0df;border:1px solid #dbe4cc;border-radius:22px;padding:30px;margin-bottom:50px}.closing h2{font-size:1.35rem;margin:0 0 12px}.closing p{margin:10px 0;color:#53634c}.fineprint{font-size:.84rem}.footer-links{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:20px}footer{background:#243f2c;color:#e7eee0;padding:28px 0;font-size:.85rem}footer a{color:#fff}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+    @media(max-width:640px){.wrap{width:calc(100% - 28px)}.hero{padding-top:34px}.brand{gap:16px}.icon{width:82px;height:82px;border-radius:18px}.badge{font-size:.72rem}.feature-body{grid-template-columns:1fr;padding:23px}.feature-nav{gap:8px}.feature-nav a{padding:7px 12px}.hero-image{border-radius:12px}.closing{padding:24px}.features{gap:24px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="studio" href="../">← あお文鳥の開発室</a><span class="badge">Android版・公開準備中</span></div></header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="app-title">
+      <div class="brand"><img class="icon" src="assets/icon.jpg" alt="Green Lifeのアプリアイコン" width="110" height="110"><div><p class="eyebrow">GARDENING &amp; GROWTH LOG</p><h1 id="app-title">Green Life</h1><p class="subtitle">菜のある生活</p></div></div>
+      <p class="headline">育てる楽しさを、毎日の記録に。</p>
+      <p class="intro">水やりをした日、初めて花が咲いた瞬間、新しく買った園芸用品。花・観葉植物・家庭菜園と過ごす毎日を、写真や記録で残せる園芸管理アプリです。</p>
+      <div class="hero-image"><img src="assets/feature-combined.jpg" alt="お世話・植物・成長写真・園芸用品・調べるの5画面を並べたGreen Lifeの紹介" width="1024" height="500" fetchpriority="high"></div>
+    </section>
+    <nav class="feature-nav" aria-label="機能紹介の目次"><a href="#care">お世話</a><a href="#plants">植物</a><a href="#photos">成長写真</a><a href="#supplies">園芸用品</a><a href="#discover">調べる</a><a href="#reminders">リマインダー</a></nav>
+    <section aria-labelledby="screens-title">
+      <h2 class="section-title" id="screens-title">5つの画面で、できること。</h2>
+      <div class="features">
+        <article class="feature" id="care">
+          <a class="feature-graphic" href="assets/screen-home.png" aria-label="ホーム画面を大きく見る"><img src="assets/feature-home.jpg" alt="ホーム画面。水やり・肥料・葉水の記録ボタンと、最後にお世話した日時を表示" width="1024" height="500" loading="lazy"></a>
+          <div class="feature-body"><div><p class="number">01 / お世話</p><h3>いつお世話したか、ひと目で。</h3><p>ホームから水やり・肥料・葉水を記録。最後に実施した日時が分かるので、日々のお世話を振り返れます。</p><a class="screen-link" href="assets/screen-home.png">ホーム画面を大きく見る →</a></div><ul><li>月ごとの水やり目標を植物に合わせて管理</li><li>液肥・剪定など、お世話の項目を自分で追加</li><li>履歴で実施日時を確認し、間違えた記録は取り消し</li></ul></div>
+        </article>
+        <article class="feature" id="plants">
+          <a class="feature-graphic" href="assets/screen-plants.png" aria-label="植物画面を大きく見る"><img src="assets/feature-plants.jpg" alt="植物コレクション画面。パンジーの写真、品種、植えた日、育成状況を表示" width="1024" height="500" loading="lazy"></a>
+          <div class="feature-body"><div><p class="number">02 / 植物</p><h3>育てている植物を、ひとまとめに。</h3><p>植物の名前・品種・置き場所・植えた日を登録。写真と一緒に管理でき、検索や複数条件の絞り込みで探せます。</p><a class="screen-link" href="assets/screen-plants.png">植物画面を大きく見る →</a></div><ul><li>育成中の植物を優先表示</li><li>育成終了・再開を簡単に切り替え、過去の記録も保存</li><li>品種や置き場所は入力履歴から選択</li><li>登録内容の修正・削除にも対応</li></ul></div>
+        </article>
+        <article class="feature" id="photos">
+          <a class="feature-graphic" href="assets/screen-photos.png" aria-label="写真ライブラリ画面を大きく見る"><img src="assets/feature-photos.jpg" alt="写真ライブラリ画面。パンジーとモンステラの成長写真、撮影日、コメントを一覧表示" width="1024" height="500" loading="lazy"></a>
+          <div class="feature-body"><div><p class="number">03 / 成長写真</p><h3>育つよろこびを、写真に。</h3><p>新しい葉が出た日や、花が咲いた瞬間を成長記録に。写真にコメントを添えて、変化を振り返れます。</p><a class="screen-link" href="assets/screen-photos.png">写真ライブラリを大きく見る →</a></div><ul><li>カメラ撮影・端末にある写真の添付に対応</li><li>写真ライブラリで一覧表示・検索・絞り込み</li><li>カレンダーから成長の記録を振り返る</li><li>成長写真をSNSなどへ共有</li></ul></div>
+        </article>
+        <article class="feature" id="supplies">
+          <a class="feature-graphic" href="assets/screen-tools.png" aria-label="園芸用品画面を大きく見る"><img src="assets/feature-tools.jpg" alt="ガーデニング用品画面。肥料や除草剤の写真、購入日、価格を一覧表示" width="1024" height="500" loading="lazy"></a>
+          <div class="feature-body"><div><p class="number">04 / 園芸用品</p><h3>買ったものも、すっきり管理。</h3><p>鉢・土・肥料・道具などを写真付きで登録。「どこで、いつ、いくらで買ったか」をまとめて残せます。</p><a class="screen-link" href="assets/screen-tools.png">園芸用品画面を大きく見る →</a></div><ul><li>購入場所・購入日・金額・自由入力の備考を記録</li><li>用品名・購入場所は入力履歴から選択</li><li>使う植物と関連付けて管理</li><li>検索・絞り込み、内容の修正・削除に対応</li></ul></div>
+        </article>
+        <article class="feature" id="discover">
+          <a class="feature-graphic" href="assets/screen-search.png" aria-label="調べる画面を大きく見る"><img src="assets/feature-search.jpg" alt="調べる画面。植物名からのWikipedia検索、植物図鑑、お気に入り動画への入口" width="1024" height="500" loading="lazy"></a>
+          <div class="feature-body"><div><p class="number">05 / 調べる</p><h3>気になる植物を、もっと知ろう。</h3><p>植物名をもとにWikipediaの概要や画像を探したり、関連動画を調べたりできます。植物を知るきっかけに役立ちます。</p><a class="screen-link" href="assets/screen-search.png">調べる画面を大きく見る →</a></div><ul><li>名前から植物の情報を取得</li><li>植物図鑑で育て方のポイントを確認</li><li>星マークで気になる植物の動画をお気に入り登録</li><li>個別の動画URLも追加可能</li></ul></div>
+        </article>
+      </div>
+    </section>
+    <section class="closing" id="reminders" aria-labelledby="reminder-title"><h2 id="reminder-title">リマインダーで、お世話の予定も。</h2><p>通知は「毎日」「曜日指定」「1回のみ」から設定。曜日指定では必要な曜日を複数選べます。追加した予定はリストで確認できます。</p><p>ベランダの小さな鉢から、お庭の花や家庭菜園まで。あなたのペースで、みどりのある暮らしを楽しみましょう。</p><p><span class="badge">Android版・公開準備中</span></p><p class="fineprint">画面は開発・テスト版のものです。通知には端末での許可が必要です。植物情報の取得や動画検索などにはインターネット接続が必要です。</p><div class="footer-links"><a href="https://sites.google.com/view/aobuncho-greenlife" target="_blank" rel="noopener">プライバシーポリシー</a><a href="mailto:aobuncho2024@gmail.com">お問い合わせ</a><a href="../#green-life">アプリ一覧に戻る</a></div></section>
+  </main>
+  <footer><div class="wrap"><span>© あお文鳥の開発室</span><a href="../">ホームページへ</a></div></footer>
+</body>
+</html>
