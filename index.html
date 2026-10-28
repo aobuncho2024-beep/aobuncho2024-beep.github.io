@@ -22,7 +22,6 @@
     .eyebrow { display:inline-flex; align-items:center; gap:8px; margin:0 0 18px; padding:8px 12px; border-radius:99px; background:rgba(255,255,255,.15); color:#fff3cc; font-size:.78rem; font-weight:800; letter-spacing:.12em; }
     h1 { margin:0; font-size:clamp(3rem,7.4vw,6.4rem); line-height:1.05; letter-spacing:.04em; }
     .lead { margin:24px 0 0; max-width:30rem; font-size:clamp(1rem,2vw,1.22rem); line-height:1.9; color:#edf7f7; }
-    .spark { position:absolute; right:7%; bottom:42px; width:132px; height:132px; border-radius:50%; background:var(--yellow); color:var(--navy); display:grid; place-items:center; font-size:2.7rem; box-shadow:0 12px 0 rgba(0,0,0,.11); transform:rotate(10deg); }
     .intro { padding:90px 0 42px; text-align:center; }
     .section-kicker { margin:0; color:#d76559; font-size:.78rem; font-weight:800; letter-spacing:.16em; }
     h2 { margin:12px 0 0; color:var(--navy); font-size:clamp(2rem,4vw,3.2rem); letter-spacing:.06em; }
@@ -41,7 +40,7 @@
     .card p { position:relative; z-index:1; max-width:26rem; margin:14px 0 0; color:#627386; line-height:1.8; } .store-links { position:relative; z-index:1; display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:23px; } .store-links .store-link { margin-top:0; } .app-store-link { display:inline-flex; height:40px; transition:transform .18s ease; } .app-store-link:hover { transform:translateY(-2px); } .app-store-link img { display:block; width:auto; height:40px; } .store-link { position:relative; z-index:1; display:inline-flex; align-items:center; gap:8px; margin-top:23px; padding:10px 14px 10px 11px; border-radius:12px; background:#18344f; color:#fff; font-size:.82rem; font-weight:800; letter-spacing:.04em; text-decoration:none; box-shadow:0 7px 14px rgba(23,52,80,.14); transition:transform .18s ease, background .18s ease; } .store-link:hover { background:#285778; transform:translateY(-2px); } .play-icon { width:20px; height:18px; flex:none; } 
     .future { margin:0 0 86px; padding:31px; border:1px dashed #9abdb6; border-radius:22px; background:#e7f6f0; color:#38685e; text-align:center; font-weight:700; }
     footer { padding:34px 0; background:#102d47; color:#dce8ec; text-align:center; font-size:.88rem; letter-spacing:.05em; }
-    @media (max-width:720px) { .wrap { width:min(100% - 28px,1120px); } .hero { min-height:580px; } .hero::after { background:linear-gradient(180deg,rgba(23,52,80,.78),rgba(23,52,80,.93)); } .hero-art { object-position:58% center; opacity:.66; } .hero-copy { padding:72px 0 90px; } .spark { width:92px; height:92px; right:6%; bottom:26px; font-size:1.9rem; } .apps { grid-template-columns:1fr; padding-bottom:72px; } .card { min-height:300px; } }
+    @media (max-width:720px) { .wrap { width:min(100% - 28px,1120px); } .hero { min-height:580px; } .hero::after { background:linear-gradient(180deg,rgba(23,52,80,.78),rgba(23,52,80,.93)); } .hero-art { object-position:58% center; opacity:.66; } .hero-copy { padding:72px 0 90px; } .apps { grid-template-columns:1fr; padding-bottom:72px; } .card { min-height:300px; } }
 
     .card-greenlife { --tint:#e6efd4; --accent:#59783d; }
     .greenlife-subtitle { display:block; margin-top:6px; font-size:1rem; font-weight:600; color:#597047; letter-spacing:.02em; }
@@ -63,7 +62,6 @@
         <p class="lead">暮らしとスポーツを少し楽しく、少し便利に。あお文鳥の開発室は、使う人のそばで役立つアプリをつくっています。</p>
       </div>
     </div>
-    <div class="spark" aria-hidden="true">✦</div>
   </header>
 
   <main class="wrap">
